@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Parisienne&display=swap');
+
+#name {
+    background-image: url('../../../assets/pictures/header-backgroud.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-size: 75px;
+    text-align: center;
+    padding: 1px;
+    letter-spacing: 50px;
+    font-family: 'Italianno', cursive;
+    box-shadow: 1px 1px 10px black;
+}

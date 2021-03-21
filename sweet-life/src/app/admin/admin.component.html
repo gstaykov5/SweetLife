@@ -1,0 +1,34 @@
+<h1>Login</h1>
+<div *ngIf='!authenticated'>
+    <input type="text" [(ngModel)]="user">
+    <input type="text" [(ngModel)]="pass">
+    <button (click)="login($event)">Log in</button>
+</div>
+
+<!-- <div class="content" *ngIf='authenticated'> -->
+  
+  <section id="viewSubmit">
+    <div class="submitArea">
+      <h1>Submit Link</h1>
+      <p>Please, fill out the form. A thumbnail image is not required.</p>
+    </div>
+    <div class="submitArea formContainer">
+
+      <form #f="ngForm" (ngSubmit)="createPost()" id="submitForm" class="submitForm">
+        <label>name</label>
+        <input  name="title" ngModel type="text">
+        <label>price</label>
+        <input  name="price" ngModel type="text">
+        <label>Description (optional):</label>
+        <textarea name="description" ngModel></textarea>
+        <label class="form-label" for="customFile">Default file input example</label>
+        <input [(ngModel)]="imageDescription" [ngModelOptions]="{standalone: true}" type="file" (change)="handleFileInput($event)" class="form-control" id="customFile" />
+        <input id="btnSubmitPost" [disabled]="f.invalid"  value="Submit" type="submit">
+      </form>
+
+    </div>
+
+  </section>
+<!-- </div> -->
+
+
