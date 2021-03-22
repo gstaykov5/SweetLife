@@ -5,6 +5,7 @@ import { DeliveryComponent } from './container/delivery/delivery.component';
 import { HomeComponent } from './container/home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { ImageListComponent } from './container/images/image-list/image-list.component';
+import { SubsectionListComponent } from './container/images/subsection-list/subsection-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'image-list', component: ImageListComponent },
+  { path: 'subsection-list', component: SubsectionListComponent },
 ];
 
 @NgModule({

@@ -5,15 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContainerModule } from './container/container.module';
 import { HeaderFooterModule } from './header-footer/header-footer.module';
-import { AdminComponent } from './admin/admin.component';
 import { FormsModule } from '@angular/forms';
-// import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdminModule } from './admin/admin.module';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent,
+    // AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContainerModule,
     FormsModule,
     HttpClientModule,
-    
+    BrowserAnimationsModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

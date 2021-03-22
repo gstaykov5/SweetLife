@@ -13,7 +13,7 @@ export class AdminComponent implements OnInit {
   user: string;
   pass: string;
   authenticated: Boolean = false;
-  // imageTitle: any = 'Test';
+  imageTitle: string;
   imageDescription: any;
   // imageFile: File;
   fileToUpload: any;
@@ -24,8 +24,9 @@ export class AdminComponent implements OnInit {
     (
       private adminService: AdminService,
   ) { }
-
+  
   ngOnInit(): void { }
+  
   
   
   login(ev) {
@@ -35,12 +36,11 @@ export class AdminComponent implements OnInit {
   
   
   createPost() {
-    // this.fileToUpload.details = this.createPostForm.value;
-    console.log(this.createPostForm)
+    let name = this.createPostForm.value.title;
     let formData = new FormData();
     formData.append(`file`, this.fileToUpload);
-
-    this.adminService.uploadImage(formData, this.pathMain, this.pathSubsection, this.fileToUpload.name)
+    debugger
+    this.adminService.uploadImage(formData, this.pathMain, this.pathSubsection, name)
       .subscribe(
         res => {
         },

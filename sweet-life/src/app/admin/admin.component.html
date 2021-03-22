@@ -15,13 +15,16 @@
     <div class="submitArea formContainer">
 
       <form #f="ngForm" (ngSubmit)="createPost()" id="submitForm" class="submitForm">
-        <label>name</label>
+
+        <label>Name</label>
         <input  name="title" ngModel type="text">
-        <label>price</label>
+
+        <label>Price</label>
         <input  name="price" ngModel type="text">
+
         <label>Description (optional):</label>
-        <textarea name="description" ngModel></textarea>
-        <label class="form-label" for="customFile">Default file input example</label>
+        <input  name="price" ngModel type="text">
+
         <input [(ngModel)]="imageDescription" [ngModelOptions]="{standalone: true}" type="file" (change)="handleFileInput($event)" class="form-control" id="customFile" />
         <input id="btnSubmitPost" [disabled]="f.invalid"  value="Submit" type="submit">
       </form>

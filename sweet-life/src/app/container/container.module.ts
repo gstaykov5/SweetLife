@@ -8,18 +8,19 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { ImageListComponent } from './images/image-list/image-list.component';
 import { ImageDetailsComponent } from './images/image-details/image-details.component';
-// import { HttpClientModule} from '@angular/common/http';
-// import { AgmCoreModule } from '@agm/core';
+import { MatCardModule } from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+import { SubsectionListComponent } from './images/subsection-list/subsection-list.component';
 
 
 @NgModule({
-  declarations: [DeliveryComponent, ContactsComponent, HomeComponent, ImageListComponent, ImageDetailsComponent],
+  declarations: [DeliveryComponent, ContactsComponent, HomeComponent, ImageListComponent, ImageDetailsComponent, SubsectionListComponent],
   imports: [
     CommonModule,
     ContainerRoutingModule,
-    RouterModule
-    // HttpClientModule,
-    // AgmCoreModule.forRoot({ apiKey: 'AIzaSyB8aQq2TPp2cp5QMPTmcCCs7bOKDYcEQuA'})
+    RouterModule,
+    MatCardModule,
+    MatListModule,
   ],
   exports: [
     DeliveryComponent,

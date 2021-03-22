@@ -16,12 +16,13 @@ export class AdminService {
   
   constructor(private http: HttpClient,) { }
   
-  uploadImage(body, path, subsection, fileName?) : Observable<any>  {
+  uploadImage(body, path, subsection, fileName) : Observable<any>  {
     const headers = new HttpHeaders({
       'user-token': this.authToken || sessionStorage.getItem('userToken'),
     })
     
     const url = `https://eu-api.backendless.com/${this.applicationID}/${this.restApiKey}/files/${path}/${fileName}?overwrite=true`;
+    debugger
     return this.http.post<ImageInfo>(url, body, {headers});
   }
   
@@ -44,7 +45,16 @@ export class AdminService {
 
 
   getImages(): Observable<any> {
-    const url = `https://eu-api.backendless.com/${this.applicationID}/${this.restApiKey}/files/images`
+    const url = `https://eu-api.backendless.com/${this.applicationID}/${this.restApiKey}/files/images`;
+    const headers = new HttpHeaders({
+      'user-token': this.authToken || sessionStorage.getItem('userToken'),
+    });
+    
+    return this.http.get(url, {headers});
+  }
+
+  loadComponents(target): Observable<any> {
+    const url = `https://eu-api.backendless.com/${this.applicationID}/${this.restApiKey}/files/images/${target}`;
     const headers = new HttpHeaders({
       'user-token': this.authToken || sessionStorage.getItem('userToken'),
     });

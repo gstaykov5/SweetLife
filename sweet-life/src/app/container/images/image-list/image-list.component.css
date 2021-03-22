@@ -1,10 +1,6 @@
-/* .example-radio-group {
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0;
-  }
+.row {
+  margin-bottom: 20px;
+  margin-left: 5px;
+  width: 99%;
+}
   
-  .example-radio-button {
-    margin: 5px;
-  }
-   */
