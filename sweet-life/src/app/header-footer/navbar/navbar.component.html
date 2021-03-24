@@ -1,14 +1,17 @@
-<div id="nav" class="row">
-    <div class="col-md-3" id="block1">
-        <h1 id="home" [routerLink]="[ '/home' ]">Home</h1>
+<div id="nav" class="row justify-content-md-center">
+    <div class="col-md-2" id="block1">
+        <h1 id="home" [routerLink]="[ '/home' ]">Начало</h1>
     </div>
-    <div class="col-md-3" id="block1">
-        <h1 id="galery" [routerLink]="[ '/image-list' ]">Галерия</h1>
+    <div class="col-md-2" id="block1">
+        <h1 id="galery">Галерия</h1>
+        <ul class="galery-content">
+            <app-dropdown></app-dropdown>
+        </ul>
     </div>
-    <div class="col-md-3" id="block2">
+    <div class="col-md-2" id="block2">
         <h1 id="delivery" [routerLink]="[ '/delivery' ]">Доставки</h1>
     </div>
-    <div class="col-md-3" id="block3">
+    <div class="col-md-2" id="block3">
         <h1 id="contacts" [routerLink]="[ '/contacts' ]">Контакти</h1>
     </div>
 </div>

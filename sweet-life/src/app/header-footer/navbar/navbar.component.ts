@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, ViewChild } from '@angular/core';
-import { AdminService } from 'src/app/admin/admin.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +7,10 @@ import { AdminService } from 'src/app/admin/admin.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private adminService: AdminService) { }
+  
+  check: boolean = false;
+
+  constructor() { }
 
   ngOnInit(): void {  }
 

@@ -1,35 +1,10 @@
-<div id="accordion">
-  
-  <div class="row">
-    <div class="card" class="d-inline-flex p-2">
-      <div id="headingOne">
-        <div class="row">
-          <button (click)="loadComponents($event)" class="btn btn-primary" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">АКСЕСОАРИ ЗА КРЪЩЕНЕ</button>
-        </div>
-        <app-subsection-list *ngFor="let component of components" [loadSubsections]="component.name"></app-subsection-list>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="card" class="d-inline-flex p-2">
-      <div id="headingTwo">
-        <div class="row">
-          <button (click)="loadComponents($event)" class="btn btn-primary" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">АКСЕСОАРИ ЗА СВАТБА</button>
-        </div>
-        <app-subsection-list *ngFor="let component of components" [loadSubsections]="component.name"></app-subsection-list>
-      </div>
-    </div>
-  </div>
-  
-  <div class="row">
-    <div class="card" class="d-inline-flex p-2">
-      <div id="headingThree">
-        <div class="row">
-          <button (click)="loadComponents($event)" class="btn btn-primary" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">ПАРТИ АРТИКУЛИ</button>
-        </div>
-        <app-subsection-list *ngFor="let component of components" [loadSubsections]="component.name"></app-subsection-list>
-      </div>
+<div *ngFor="let image of images" class="images">
+  <div class="" >
+    <img class="card-img-top" [src]="image.publicUrl" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Here is image name</h5>
+      <p class="card-text"> some text</p>
+      <a [routerLink]="[ '/details', ]"class="btn btn-primary">Details</a>
     </div>
   </div>
 

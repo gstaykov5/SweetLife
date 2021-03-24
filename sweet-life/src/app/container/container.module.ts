@@ -9,12 +9,23 @@ import { RouterModule } from '@angular/router';
 import { ImageListComponent } from './images/image-list/image-list.component';
 import { ImageDetailsComponent } from './images/image-details/image-details.component';
 import { MatCardModule } from '@angular/material/card';
-import {MatListModule} from '@angular/material/list';
-import { SubsectionListComponent } from './images/subsection-list/subsection-list.component';
+import { MatListModule } from '@angular/material/list';
+import { BaptismImagesComponent } from './images/baptism-images/baptism-images.component';
+import { WeddingImagesComponent } from './images/wedding-images/wedding-images.component';
+import { PartyImagesComponent } from './images/party-images/party-images.component';
 
 
 @NgModule({
-  declarations: [DeliveryComponent, ContactsComponent, HomeComponent, ImageListComponent, ImageDetailsComponent, SubsectionListComponent],
+  declarations: 
+    [DeliveryComponent,
+    ContactsComponent,
+    HomeComponent,
+    ImageListComponent,
+    ImageDetailsComponent,
+    BaptismImagesComponent,
+    WeddingImagesComponent,
+    PartyImagesComponent,
+  ],
   imports: [
     CommonModule,
     ContainerRoutingModule,
@@ -26,7 +37,9 @@ import { SubsectionListComponent } from './images/subsection-list/subsection-lis
     DeliveryComponent,
     ContactsComponent,
     HomeComponent,
-    ImageListComponent
+    ImageListComponent,
+    ImageDetailsComponent,
+    BaptismImagesComponent,
   ]
 })
 export class ContainerModule { }

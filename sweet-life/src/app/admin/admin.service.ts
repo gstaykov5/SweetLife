@@ -10,8 +10,6 @@ export class AdminService {
 
   applicationID: string = '66DC5C9B-90FE-9C28-FF95-E4869BE0D800';
   restApiKey: string = '5C540C05-6541-48C5-B196-4BFCD603F749';
-  // jsApiKey: string = 'E5249630-930A-45F5-A423-2A5ABF819D72';
-  // apiKey: string = '97AD68B7-2E21-4DC7-A989-F56528D2BB6F';
   authToken: any;
   
   constructor(private http: HttpClient,) { }
@@ -44,8 +42,8 @@ export class AdminService {
   }
 
 
-  getImages(): Observable<any> {
-    const url = `https://eu-api.backendless.com/${this.applicationID}/${this.restApiKey}/files/images`;
+  getImages(firstPath, secondPath): Observable<any> {
+    const url = `https://eu-api.backendless.com/${this.applicationID}/${this.restApiKey}/files/images/${firstPath}/${secondPath}`;
     const headers = new HttpHeaders({
       'user-token': this.authToken || sessionStorage.getItem('userToken'),
     });
@@ -53,13 +51,13 @@ export class AdminService {
     return this.http.get(url, {headers});
   }
 
-  loadComponents(target): Observable<any> {
-    const url = `https://eu-api.backendless.com/${this.applicationID}/${this.restApiKey}/files/images/${target}`;
-    const headers = new HttpHeaders({
-      'user-token': this.authToken || sessionStorage.getItem('userToken'),
-    });
+  // loadComponents(firstPath): Observable<any> {
+  //   const url = `https://eu-api.backendless.com/${this.applicationID}/${this.restApiKey}/files/images/${firstPath}`;
+  //   const headers = new HttpHeaders({
+  //     'user-token': this.authToken || sessionStorage.getItem('userToken'),
+  //   });
     
-    return this.http.get(url, {headers});
-  }
+  //   return this.http.get(url, {headers});
+  // }
 
 }

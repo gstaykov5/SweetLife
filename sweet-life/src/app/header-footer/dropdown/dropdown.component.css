@@ -1,0 +1,8 @@
+div{
+    display: flex;
+}
+
+ul{
+    list-style: none;
+    outline: none;
+}

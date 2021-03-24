@@ -1,6 +1,6 @@
-.row {
-  margin-bottom: 20px;
-  margin-left: 5px;
-  width: 99%;
+img{
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  box-shadow: 1px 2px 10px black;
 }
-  

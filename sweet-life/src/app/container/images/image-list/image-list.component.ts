@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AdminService } from 'src/app/admin/admin.service';
 
 
@@ -9,26 +9,10 @@ import { AdminService } from 'src/app/admin/admin.service';
 })
 export class ImageListComponent implements OnInit {
 
-  images: any;
-  target: string;
-  components: [];
+  @Input() images: any;
 
   constructor(private adminService: AdminService) { }
 
-  ngOnInit(): void {
-    this.adminService.getImages()
-      .subscribe(res => {
-        this.images = res;
-      });
-  };
-
-  loadComponents(e) {
-    this.target = e.target.textContent;
-    console.log(this.target)
-    this.adminService.loadComponents(this.target)
-      .subscribe(res => {
-        this.components = res;
-      });
-  };
+  ngOnInit(): void { };
 
 }

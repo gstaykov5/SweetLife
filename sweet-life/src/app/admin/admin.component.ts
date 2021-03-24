@@ -50,11 +50,6 @@ export class AdminComponent implements OnInit {
   }
 
 
-  // imageInputChange(imageInput: any) {
-  //   this.imageFile = imageInput.files[0];
-  // }
-
-
   handleFileInput(event) {
     this.fileToUpload = event.target.files[0];
   }
