@@ -1,8 +1,40 @@
-div{
-    display: flex;
+.galery {
+  display: flex;
 }
 
-ul{
-    list-style: none;
-    outline: none;
+a {
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  outline: none;
+  margin-left: 12px;
+  margin-top: 7px;
+  /* width: 100%; */
+}
+
+li:hover {
+    box-shadow: 1px 1px 10px;
+}
+
+ul.baptism {
+  background-image: url("/assets/pictures/baptism-img.jpg");
+  background-repeat: no-repeat;
+  background-size: 300px 340px;
+  box-shadow: 1px 1px 10px;
+}
+
+ul.weding {
+  background-image: url("/assets/pictures/weding-img.jpg");
+  background-repeat: no-repeat;
+  background-size: 300px 340px;
+  box-shadow: 1px 1px 10px;
+}
+
+ul.party {
+  background-image: url("/assets/pictures/party-img.jpg");
+  background-repeat: no-repeat;
+  background-size: 300px 340px;
+  box-shadow: 1px 1px 10px;
 }

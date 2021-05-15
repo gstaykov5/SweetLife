@@ -1,0 +1,20 @@
+ul{
+    list-style: none;
+}
+
+div{
+    display: flex;
+    column-gap: 300px;
+}
+
+li{
+    cursor: pointer;
+}
+
+app-image-list{
+    display: flex;
+    column-gap: 100px;
+    width: 200px;
+    height: 300px;
+    object-fit: none;
+}
