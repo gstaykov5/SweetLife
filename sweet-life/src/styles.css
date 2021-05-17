@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-  background-image: url("./assets/pictures/background.jpg");
+  background-image: url("./assets/pictures/back-ground.jpg");
   background-repeat: no-repeat;
+  width: 100%;
   background-size: 100%;
 }
 

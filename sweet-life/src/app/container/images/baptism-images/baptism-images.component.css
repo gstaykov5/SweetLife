@@ -1,20 +1,38 @@
-ul{
-    list-style: none;
+ul {
+  list-style: none;
+  position: relative;
+  left: 171px;
+  top: 90px;
+  padding: 2px;
+  background-color: #6a0546;
+  box-shadow: 4px 5px 21px;
+  text-align: center;
 }
 
-div{
-    display: flex;
-    column-gap: 300px;
+ul div {
+  background-color: chocolate;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-li{
-    cursor: pointer;
+div {
+  display: flex;
+  column-gap: 300px;
 }
 
-app-image-list{
-    display: flex;
-    column-gap: 100px;
-    width: 200px;
-    height: 300px;
-    object-fit: none;
+li {
+  color: rgb(184, 177, 177);
+  cursor: pointer;
+}
+
+li:hover {
+  background: linear-gradient(135deg, #66046d 15%, #8c11d3 100%);
+}
+
+app-image-list {
+  display: flex;
+  column-gap: 100px;
+  width: 200px;
+  height: 300px;
+  object-fit: none;
 }
